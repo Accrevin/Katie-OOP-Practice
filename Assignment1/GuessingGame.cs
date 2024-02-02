@@ -1,6 +1,6 @@
 ﻿namespace Assignment1
 {
-    internal class Program
+    internal class GuessingGame
     {
         static void Main(string[] args)
         {
