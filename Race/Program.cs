@@ -13,7 +13,7 @@
             int PlayerBPos = 1;
             bool RunGame = true;
 
-           while (RunGame)
+            while (RunGame)
             {
                 bool APrint = false;
                 bool BPrint = false;
@@ -32,14 +32,29 @@
                         {
                             Random rand = new Random();
                             int PlayerMove = rand.Next(1, 5);
-                            if(PlayerMove == 4) 
+                            if (PlayerMove == 4)
                             {
                                 PlayerAPos++;
                             }
                         }
-                         
+
+                        else if (course[PlayerBPos] == '.')
+                        {
+                            Random rand = new Random();
+                            int PlayerMove = rand.Next(1, 5);
+                            if (PlayerMove == 4)
+                            {
+                                PlayerAPos++;
+                            }
+                        }
+                        else
+                        {
+                            Console.Write(course[i]);
+                        }
+
                         APrint = true;
                     }
+
 
 
                     //PlayerB Logic.
@@ -57,7 +72,19 @@
                             }
                         }
 
+
+
                         //
+
+                        else if (course[PlayerBPos] == '.')
+                        {
+                            Random rand = new Random();
+                            int PlayerMove = rand.Next(1, 9);
+                            if (PlayerMove == 4)
+                            {
+                                PlayerBPos++;
+                            }
+                        }
                         BPrint = true;
                     }
 

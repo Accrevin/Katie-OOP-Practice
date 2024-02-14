@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GuessingGame", "..\..\..\va
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComposerAssignment", "..\..\..\var06katie\source\repos\ObjectOrientatedProgramming\Composer\ComposerAssignment.csproj", "{21F6001A-32BD-4667-91B3-E2A9FE0BA5B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Race", "Race\Race.csproj", "{624C66AC-510E-4AF4-948E-8BA00C8DC502}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Race", "Race\Race.csproj", "{624C66AC-510E-4AF4-948E-8BA00C8DC502}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwentyOne", "TwentyOne\TwentyOne.csproj", "{E15C45F9-6450-4944-92BF-1E9760825F95}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{624C66AC-510E-4AF4-948E-8BA00C8DC502}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{624C66AC-510E-4AF4-948E-8BA00C8DC502}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{624C66AC-510E-4AF4-948E-8BA00C8DC502}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E15C45F9-6450-4944-92BF-1E9760825F95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E15C45F9-6450-4944-92BF-1E9760825F95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E15C45F9-6450-4944-92BF-1E9760825F95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E15C45F9-6450-4944-92BF-1E9760825F95}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
