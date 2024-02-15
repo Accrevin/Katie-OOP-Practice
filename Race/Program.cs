@@ -37,7 +37,17 @@
                                 PlayerAPos++;
                             }
                         }
-                         
+
+                        else if (course[PlayerBPos] == '.')
+                        {
+                            Random rand = new Random();
+                            int PlayerMove = rand.Next(1, 9);
+                            if (PlayerMove == 8)
+                            {
+                                PlayerAPos++;
+                            }
+                        }
+
                         APrint = true;
                     }
 
@@ -52,6 +62,16 @@
                             Random rand = new Random();
                             int PlayerMove = rand.Next(1, 5);
                             if (PlayerMove == 4)
+                            {
+                                PlayerBPos++;
+                            }
+                        }
+
+                        if (course[PlayerBPos] == '.')
+                        {
+                            Random rand = new Random();
+                            int PlayerMove = rand.Next(1, 9);
+                            if (PlayerMove == 8)
                             {
                                 PlayerBPos++;
                             }
