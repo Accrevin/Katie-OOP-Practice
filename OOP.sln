@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GuessingGame", "GuessingGam
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Race", "Race\Race.csproj", "{6704ADC1-B98C-4D55-8349-2CF89CDB19FE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwentyOne", "TwentyOne\TwentyOne.csproj", "{4BB7536E-2289-469D-A58E-C65B23C09E89}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{6704ADC1-B98C-4D55-8349-2CF89CDB19FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6704ADC1-B98C-4D55-8349-2CF89CDB19FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6704ADC1-B98C-4D55-8349-2CF89CDB19FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BB7536E-2289-469D-A58E-C65B23C09E89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BB7536E-2289-469D-A58E-C65B23C09E89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BB7536E-2289-469D-A58E-C65B23C09E89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BB7536E-2289-469D-A58E-C65B23C09E89}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
