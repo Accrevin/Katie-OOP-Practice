@@ -1,50 +1,163 @@
 ﻿namespace Assignment1
 {
-
-    class Vector2
+    abstract class Piece
     {
-        public float X { get; set; }
-        public float Y { get; set; }
+        public Vector2 Pos;
+        public char Team;
 
-        public Vector2(float x, float y)
+        public Piece (char team)
+        {
+            Team = team;
+        }
+
+        public abstract List<Vector2> CalculateMovements();
+    }
+
+    class Knight : Piece
+    {
+        public Knight(char team) : base (team) 
+        {
+        }
+
+        public override List<Vector2> CalculateMovements()
+        {
+            List<Vector2> movements =
+            [
+                Pos + new Vector2(1, -2),
+                Pos - new Vector2(2, -1),
+                Pos + new Vector2(2, -1),
+                Pos - new Vector2(1, -2),
+                Pos + new Vector2(1, 2),
+                Pos - new Vector2(2, 1),
+                Pos + new Vector2(2, 1),
+                Pos - new Vector2(1, 2),
+            ];
+
+            return movements;
+        }
+    }
+
+    struct Vector2
+    {
+        public int X, Y;
+
+        public static readonly Vector2 Zero = new Vector2(0,0);
+
+        public Vector2(int x, int y)
         {
             X = x;
             Y = y;
         }
 
-    }
-    class Character
-    {
-        public Vector2 position { get; set; }
-        public string name;
-        public Vector2 translateDistance { get; set; }
-
-        public Character(Vector2 Position, string Name)
+        public static Vector2 operator +(Vector2 a, Vector2 b)
         {
-            Position = position;
-            Name = name;
+            return new Vector2(a.X + b.X, a.Y + b.Y);
         }
 
-        public Vector2 Translate(Vector2 TranslateDistance,Vector2 position)
+        public static Vector2 operator -(Vector2 a, Vector2 b)
         {
-            Vector2 NewLocation = new Vector2(position.X, position.Y);
-            NewLocation.X = NewLocation.X + translateDistance.X;
-            NewLocation.Y = NewLocation.Y + translateDistance.Y;
-            return NewLocation;         
+            return new Vector2(a.X - b.X, a.Y - b.Y);
+        }
+
+
+        public override string ToString()
+        {
+            return $"{X}, {Y}";
+        }
+    }
+    class program
+    {
+        static void Main()
+        {
+            int boardSize = 8;
+            List<Piece> = new List<Piece>();
+            piece player = new Knight('X');
+            List<Vector2> movements = new List<Vector2>();
+
+            PrintBoard(Piece, boardSize);
+
+            while (true)
+            {
+                Console.Clear();
+                
+                List<Vector2> movements = player.CalculateMovements();
+                
+
+                PrintBoard(Piece, boardSize);
+                while (!Console.KeyAvailable) { }
+                ConsoleKey key = Console.ReadKey(true).Key;
+                Vector2 targetPos = Piece.Pos;
+
+                if (key == ConsoleKey.Q)
+                {
+                    targetPos.Y -= 1;
+                    targetPos.X -= 1;
+                    Console.WriteLine(targetPos);
+                }
+
+                else if (key == ConsoleKey.E)
+                {
+                    targetPos.Y -= 1;
+                    targetPos.X += 1;
+                    Console.WriteLine(targetPos);
+                }
+
+                else if (key == ConsoleKey.A)
+                {
+                    targetPos.Y += 1;
+                    targetPos.X -= 1;
+                    Console.WriteLine(targetPos);
+                }
+
+                else if (key == ConsoleKey.D)
+                {
+                    targetPos.Y += 1;
+                    targetPos.X += 1;
+                    Console.WriteLine(targetPos);
+                }
+                if (targetPos.X >=0 && targetPos.X < boardSize && targetPos.Y >= 0 && targetPos.Y < boardSize)
+                {
+                    Piece.Pos = targetPos;
+                }
+            }
+
+        }
+        static void PrintBoard(Piece piece, int N)
+        {
+            string TilePiece = "[X]";
+            string tile = "[ ]";
+            
+            for (int i = 0; i < N; i++)
+            {
+                for (int j = 0; j < N; j++)
+                {
+                    if (piece.Pos.Y == i && piece.Pos.X == j)
+                    {
+                        Console.Write(TilePiece);
+                    }
+                    else
+                    {
+                        Console.Write(tile);
+                    }
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine(piece.Pos);
+
         }
     }
 
-    
-    internal class GuessingGame
-    {
-        static void Main(string[] args)
-        {
-            Vector2 location = new Vector2(0.0f, 0.0f);
+   
+    //internal class GuessingGame
+    //{
+    //    static void Main(string[] args)
+    //    {
+    //        Vector2 location = new Vector2(0.0f, 0.0f);
 
-            Character character = new Character(location, "cube");
-            character.translateDistance = new Vector2(1.5f, 2.5f);
-            character.position = character.Translate(character.translateDistance, character.position);
-            Console.WriteLine(character.position);
+    //        Character character = new Character(location, "cube");
+    //        character.translateDistance = new Vector2(1.5f, 2.5f);
+    //        character.position = character.Translate(character.translateDistance, character.position);
+    //        Console.WriteLine(character.position);
             
            
 
@@ -128,6 +241,6 @@
 
 
                
-            }
-        }
+        //    }
+        //}
     }
