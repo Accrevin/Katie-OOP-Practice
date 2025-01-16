@@ -99,7 +99,7 @@ namespace Checkers
                 //'X' Turn
                 if (turn == 0)
                 {
-                    Console.WriteLine("Player X turn");
+                    Console.WriteLine("Player X turn, type the piece's position and the direction to move it");
                     string moveinput = Console.ReadLine();
 
                     //split input into selected piece and direction to move in
@@ -232,7 +232,7 @@ namespace Checkers
                 //this is basically the exact same thing as X but swapped to O
                 if (turn == 1)
                 {
-                    Console.WriteLine("Player O turn");
+                    Console.WriteLine("Player O turn, type the piece's position and the direction to move it");
                     string moveinput = Console.ReadLine();
                     string[] move = moveinput.Split(' ');
 
