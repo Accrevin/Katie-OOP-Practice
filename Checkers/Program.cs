@@ -430,7 +430,7 @@ namespace Checkers
 
                         Console.Write("]");
                     }
-
+                    //AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
                     Console.WriteLine();
                 }
             }
